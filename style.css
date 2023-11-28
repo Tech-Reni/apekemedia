@@ -1,0 +1,682 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    position: fixed;
+    background: white;
+    justify-content: space-evenly;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    z-index: 2;
+    box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    width: 110px;
+    height: 110px;
+}
+
+.logo img {
+    width: 90%;
+    margin-top: 7px;
+    margin-left: calc(50% - 45%);
+}
+
+.desktop-nav-container {
+    width: 600px;
+    margin-left: 30px;
+}
+
+.desktop-nav-container .desktop-nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.desktop-nav-container .desktop-nav a li {
+    margin-top: 35px;
+    color: black;
+    cursor: pointer;
+}
+
+.desktop-nav-container .desktop-nav a li:hover {
+    color: rgb(120, 120, 120);
+}
+
+.hamburger {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: none;
+    margin-top: 20px;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 5px;
+    border-radius: 3px;
+    margin-top: 5px;
+    display: block;
+    background: rgb(235, 0, 0);
+}
+
+.hamburger .bar:nth-child(2) {
+    width: 20px;
+    margin-left: calc(50% - 20px);
+}
+
+.mobile-nav-container {
+    width: 80%;
+    height: 350px;
+    color: white;
+    position: fixed;
+    margin-top: 200px;
+    margin-left: -130%;
+    background: rgba(20, 20, 20, 0.9);
+    background-image: url('assets/images/logo.jpg');
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-size: 140%;
+    border-radius: 15px;
+    transition: all 400ms;
+    box-shadow: 10px 30px 128px 40px rgba(0, 0, 0, 0.6), 0 32px 64px -48px rgba(0, 0, 0, 0.8);
+    z-index: 100;
+}
+
+.mobile-nav-container.active {
+    margin-left: calc(50% - 40%);
+    transition: all 500ms;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.mobile-nav a li {
+    color: white;
+    letter-spacing: 1px;
+}
+
+.mobile-nav .close {
+    width: 50px;
+    height: 60px;
+    margin-top: 2px;
+    margin-left: calc(100% - 55px);
+    background: transparent;
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+}
+
+.first-sect {
+    width: 100%;
+    height: 500px;
+    padding: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 120%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-image: url('assets/images/icon-bg.png');
+    background-repeat: repeat;
+    background-size: 70%;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 76%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 76%);
+}
+
+.first-sect div {
+    width: 500px;
+    height: 400px;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.first-sect div:nth-child(1) {
+    padding: 5px;
+    text-align: left;
+    font-size: 40px;
+    color: white;
+}
+
+.first-sect div:nth-child(1) p {
+    margin-top: calc(50% - 200px);
+    font-weight: 200;
+}
+
+.contact-btn {
+    width: 120px;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgb(233, 23, 23);
+    border: none;
+    border-radius: 18px;
+}
+
+.service {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.service p {
+    color: rgb(233, 23, 23);
+}
+
+.service .title {
+    font-size: 40px;
+    width: 600px;
+    color: rgb(40, 40, 40);
+    margin-left: calc(50% - 300px);
+}
+
+.service-cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.service-cards .card {
+    width: 300px;
+    height: 350px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(5, 5, 5, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: calc(50% - 50px);
+    border-radius: 20px;
+}
+
+.card p {
+    color: rgb(33, 132, 185);
+}
+
+.curved {
+    background: rgb(233, 23, 23);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0;
+}
+
+.curved.second {
+    background: rebeccapurple;
+}
+
+.curved h1 {
+    margin: 0;
+    font-weight: 300;
+}
+
+.curved p {
+    width: 90%;
+    text-align: center;
+    margin-left: calc(50% - 45%);
+    font-size: 1rem;
+}
+
+.curved svg {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.curved.upper {
+    background: transparent;
+}
+
+
+/* THE WEIRD QUESTION PART THAT HAS PLUS AND MINUS ICONS */
+
+.section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+
+/*
+=============== 
+Questions
+===============
+*/
+
+.section-center {
+    max-width: var(--fixed-width);
+}
+
+.question {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    margin-bottom: 2rem;
+    color: rgb(233, 23, 23);
+}
+
+.question-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    padding-bottom: 1rem;
+}
+
+.question-title p {
+    margin-bottom: 0;
+    letter-spacing: 0.8px;
+}
+
+.question-btn {
+    font-size: 1.5rem;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    transition: var(--transition);
+    color: rgb(233, 23, 23);
+}
+
+.question-text {
+    text-align: center;
+    padding: 1rem 0 1.5rem 0;
+    color: rgb(233, 23, 23);
+    letter-spacing: 0.8px;
+    line-height: 35px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.question-text p {
+    margin-bottom: 0;
+}
+
+
+/* hide text */
+
+.question-text {
+    display: none;
+}
+
+.show-text .question-text {
+    display: block;
+}
+
+.minus-icon {
+    display: none;
+}
+
+.show-text .minus-icon {
+    display: inline;
+}
+
+.show-text .plus-icon {
+    display: none;
+}
+
+
+/***********************/
+
+
+/* ****ABOUT ME**** */
+
+
+/***********************/
+
+.meet-the-ceo {
+    color: rgb(233, 23, 23);
+    font-size: larger;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.about {
+    min-height: 80vh;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    width: 40%;
+    height: 600px;
+    background-position-y: 500px;
+    background: url('./assets/images/img2.jpg') no-repeat center / cover;
+    border-radius: 15px;
+}
+
+.right {
+    width: 60%;
+    min-height: 400px;
+    background-color: #2c3e3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 8px;
+    color: white;
+    margin-left: -100px;
+}
+
+.right h1 {
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+.right p {
+    margin: 20px 0;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.right a {
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    padding: 20px 30px;
+    display: inline-block;
+    letter-spacing: 2px;
+    border-radius: 10px;
+}
+
+
+/* THIS IS THE STYLING FOR THE REVIEW SECTION  */
+
+#review-page,
+#rate-card {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#review-page::after,
+#rate-card::after {
+    content: "";
+    width: 40px;
+    height: 5px;
+    border-radius: 5px;
+    margin-left: calc(50% - 75px);
+    display: block;
+    background: linear-gradient(to right, #ffcc33, #ff6666);
+}
+
+#reviews {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 530px;
+}
+
+.slides {
+    display: flex;
+    overflow: visible;
+    height: 480px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    height: 480px;
+}
+
+.testimonial {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 12px;
+    background: rgb(12, 12, 35);
+    height: 360px;
+    color: white;
+}
+
+.testimonial .review {
+    font-weight: 400;
+    letter-spacing: 0.4px;
+}
+
+.testimonial p {
+    margin-top: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.review-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    margin-left: calc(50% - 35px);
+    margin-bottom: 10px;
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .testimonial {
+        padding: 15px;
+    }
+}
+
+
+/* THIS IS THE STYLING FOR THE RATE CARD  */
+
+.rate-cards {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.price-card {
+    width: 300px;
+    height: 100%;
+    margin-top: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid white;
+    box-shadow: 3px 4px 12px 2px rgba(0, 0, 0, 0.3);
+}
+
+.price {
+    width: 100%;
+    height: 150px;
+    padding: 5px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    color: #627afe;
+    background-color: white;
+}
+
+.price .price-title {
+    text-align: center;
+    margin-top: 10px;
+    font-size: x-large;
+    font-weight: 400;
+}
+
+.price p {
+    text-align: center;
+    font-size: x-large;
+    margin-top: 10px;
+}
+
+.rate-description {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.pay-btn-container {
+    width: 100%;
+    height: 70px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.pay-btn {
+    cursor: pointer;
+    width: 160px;
+    margin-top: 6px;
+    margin-left: calc(50% - 80px);
+    padding: 10px;
+    font-size: 18px;
+    background: white;
+    color: #627afe;
+    border-radius: 8px;
+    border: 1px solid #627afe;
+}
+
+
+/* THIS IS THE FOOTER STYLING  */
+
+footer {
+    width: 100%;
+    height: 100%;
+    background: rgb(12, 12, 35);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* STYLING FOR MOBILE  */
+
+@media (max-width: 800px) {
+    body {
+        background-position-y: 120px;
+    }
+    header {
+        justify-content: space-between;
+        height: 125px;
+    }
+    .logo {
+        width: 95px;
+        height: 95px;
+        margin-top: -10px;
+    }
+    .logo img {
+        width: 90%;
+        margin-left: calc(50% - 45%);
+    }
+    .desktop-nav-container {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .first-sect {
+        background-size: 110%;
+    }
+    .first-sect div {
+        margin-top: 10px;
+    }
+    .first-sect div:nth-child(1) {
+        padding: 5px;
+        text-align: center;
+        font-size: 30px;
+        height: 300px;
+    }
+    .first-sect div:nth-child(1) p {
+        margin-top: 60px;
+        font-weight: 200;
+    }
+    .first-sect div:nth-child(2) {
+        height: 250px;
+    }
+    .service .title {
+        font-size: 25px;
+        width: 340px;
+        margin-left: calc(50% - 170px);
+    }
+    .section-center {
+        width: 95vw;
+    }
+    .about-container {
+        flex-direction: column;
+        width: 100%;
+        margin: 0 10px;
+    }
+    .left {
+        width: 100%;
+    }
+    .right {
+        width: 90%;
+        margin: 0;
+        margin-top: -100px;
+    }
+}
