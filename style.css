@@ -86,7 +86,7 @@ header {
     height: 350px;
     color: white;
     position: fixed;
-    margin-top: 200px;
+    margin-top: 150px;
     margin-left: -130%;
     background: rgba(20, 20, 20, 0.9);
     background-image: url('assets/images/logo.jpg');
@@ -393,7 +393,7 @@ Questions
     width: 40%;
     height: 600px;
     background-position-y: 500px;
-    background: url('assets/images/img2.jpg') no-repeat center / cover;
+    background: url('./assets/images/img2.jpg') no-repeat center / cover;
     border-radius: 15px;
 }
 
@@ -470,21 +470,22 @@ swiper-container {
 swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 300px;
-    height: 530px;
+    width: 320px;
+    height: 630px;
+    border: 1px solid white;
 }
 
 .slides {
     display: flex;
     overflow: visible;
-    height: 480px;
+    height: 580px;
     transition: transform 0.5s ease-in-out;
 }
 
 .slide {
     flex: 0 0 100%;
     box-sizing: border-box;
-    height: 480px;
+    height: 590px;
 }
 
 .testimonial {
@@ -493,7 +494,7 @@ swiper-slide {
     background-color: #fff;
     border-radius: 12px;
     background: rgb(12, 12, 35);
-    height: 360px;
+    height: 470px;
     color: white;
 }
 
@@ -545,14 +546,57 @@ swiper-slide {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     border: 1px solid white;
     box-shadow: 3px 4px 12px 2px rgba(0, 0, 0, 0.3);
 }
 
+.price-card::before {
+    width: 110px;
+    height: 38px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: calc(100% - 100px);
+    display: block;
+    content: "7K";
+    font-size: x-large;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    background-color: #2c3e3d;
+}
+
+.price-card:nth-child(2)::before {
+    content: "10K";
+}
+
+.price-card:nth-child(3)::before {
+    content: "20K";
+}
+
+.price-card:nth-child(4)::before {
+    content: "40K";
+}
+
+.price-card:nth-child(5)::before {
+    content: "50K";
+}
+
+.price-card:nth-child(6)::before {
+    content: "80K";
+}
+
+.price-card:nth-child(7)::before {
+    content: "200K";
+}
+
+.price-card:nth-child(8)::before {
+    content: "400K";
+}
+
 .price {
     width: 100%;
-    height: 150px;
+    height: 100%;
     padding: 5px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
@@ -565,12 +609,7 @@ swiper-slide {
     margin-top: 10px;
     font-size: x-large;
     font-weight: 400;
-}
-
-.price p {
-    text-align: center;
-    font-size: x-large;
-    margin-top: 10px;
+    font-family: cursive;
 }
 
 .rate-description {
@@ -610,7 +649,51 @@ footer {
     background: rgb(12, 12, 35);
     color: white;
     text-align: center;
-    padding: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.footer-contacts {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer .copyright,
+footer .social-links {
+    width: 340px;
+    height: 100%;
+}
+
+footer .copyright {
+    text-align: left;
+    padding: 40px;
+}
+
+footer .social-links {
+    text-align: left;
+    padding: 40px;
+}
+
+footer .social-links p {
+    margin-top: 30px;
+}
+
+footer .social-links a {
+    color: white;
+}
+
+footer .copyright h2 {
+    margin-top: 30px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+}
+
+footer .developer-details {
+    padding: 15px;
+    background: rgb(8, 8, 24);
 }
 
 
