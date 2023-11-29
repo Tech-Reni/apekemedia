@@ -393,7 +393,7 @@ Questions
     width: 40%;
     height: 600px;
     background-position-y: 500px;
-    background: url('./assets/images/img2.jpg') no-repeat center / cover;
+    background: url('assets/images/img2.jpg') no-repeat center / cover;
     border-radius: 15px;
 }
 
