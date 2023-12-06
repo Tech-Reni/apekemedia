@@ -28,9 +28,5 @@ ScrollReveal({
     delay: 10
 });
 
-ScrollReveal().reveal('.article', { origin: 'right' });
-ScrollReveal().reveal('.card', { origin: 'left' });
-ScrollReveal().reveal('.question', { origin: 'right' });
-ScrollReveal().reveal('.left', { origin: 'right' });
-ScrollReveal().reveal('.right', { origin: 'left' });
-ScrollReveal().reveal('.price-card', { origin: 'left' });
+ScrollReveal().reveal('.article, .left, .question', { origin: 'right' });
+ScrollReveal().reveal('.card, .right , .price-card', { origin: 'left' });
