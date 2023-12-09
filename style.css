@@ -762,8 +762,9 @@ footer .developer-details {
         margin: 0 10px;
     }
     .left {
-        width: 100%;
-        height: 580px;
+        width: 90%;
+        margin-left:cal(50% - 45%);
+        max-height: 530px;
         overflow: hidden;
     }
     .right {
