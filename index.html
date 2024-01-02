@@ -32,6 +32,42 @@
 
     <title>Apeke's Media</title>
     <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        /* Styles for the overlay */
+        .overlay {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.7);
+        }
+    
+        /* Styles for the pop-up */
+        .popup {
+          position: fixed;
+          top: 60%;
+          left: 50%;
+          width: 80%;
+          transform: translate(-50%, -50%);
+          background: #fff;
+          padding: 20px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          z-index: 20;
+        }
+    
+        /* Styles for the close button */
+        .closePopup {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+          font-size: xx-large;
+        }
+      </style>
 </head>
 
 <!-- THE PRELOADER  -->
@@ -41,7 +77,7 @@
     <!-- NAV CONTAINER FOR MOBILE  -->
     <div class="mobile-nav-container">
         <ul class="mobile-nav">
-            <button class="close">X</button>
+            <button class="close_btn">X</button>
             <a href="#">
                 <li>Home</li>
             </a>
@@ -94,8 +130,8 @@
     <section class="first-sect">
         <div class="article">
             <p>Take your brand to the next Level with Apeke's Media</p>
-            <a href="tel:+234 8145 355 669">
-                <button class="contact-btn">Contact Me</button>
+            <a href="https://wa.me/+2348145355669">
+                <button class="contact-btn">Message Me</button>
             </a>
         </div>
     </section>
@@ -306,6 +342,9 @@
     <!-- THIS IS THE RATE CARD SECTION  -->
     <section class="rate-cards">
         <div class="price-card">
+            <div class="requirements">
+                <button onclick="openPopup('popup1')">Requirements</button>
+            </div>
             <div class="price">
                 <h4 class="price-title">
                     Link and Business Picture
@@ -322,6 +361,9 @@
             </div>
         </div>
         <div class="price-card">
+            <div class="requirements">
+                <button onclick="openPopup('popup1')">Requirements</button>
+            </div>
             <div class="price" style="color: rebeccapurple; padding: 10px;">
                 <h4 class="price-title">
                     Link and business video
@@ -338,6 +380,9 @@
             </div>
         </div>
         <div class="price-card">
+            <div class="requirements">
+                <button onclick="openPopup('popup1')">Requirements</button>
+            </div>
             <div class="price" style="color: rgb(233, 23, 23);">
                 <h4 class="price-title">
                     Talking about a brand without products
@@ -354,6 +399,9 @@
             </div>
         </div>
         <div class="price-card">
+            <div class="requirements">
+                <button onclick="openPopup('popup1')">Requirements</button>
+            </div>
             <div class="price" style="color: #429933;">
                 <h4 class="price-title">
                     Talking about a brand with products
@@ -370,6 +418,9 @@
             </div>
         </div>
         <div class="price-card">
+            <div class="requirements">
+                <button onclick="openPopup('popup1')">Requirements</button>
+            </div>
             <div class="price">
                 <h4 class="price-title">
                     Rock & Tag for one outfit
@@ -385,6 +436,9 @@
             </div>
         </div>
         <div class="price-card">
+            <div class="requirements">
+                <button onclick="openPopup('popup1')">Requirements</button>
+            </div>
             <div class="price" style="color: rebeccapurple; padding: 10px;">
                 <h4 class="price-title">
                     Rock & Tag for two outfits
@@ -400,6 +454,9 @@
             </div>
         </div>
         <div class="price-card">
+            <div class="requirements">
+                <button onclick="openPopup('popup1')">Requirements</button>
+            </div>
             <div class="price" style="color: rgb(233, 23, 23);">
                 <h4 class="price-title">
                     Influencing for a month
@@ -416,6 +473,9 @@
             </div>
         </div>
         <div class="price-card">
+            <div class="requirements">
+                <button onclick="openPopup('popup1')">Requirements</button>
+            </div>
             <div class="price" style="color: #429933;">
                 <h4 class="price-title">
                     Ambassadorial Deal for a month
@@ -433,6 +493,18 @@
         </div>
     </section>
 
+    <!-- Popup 1 -->
+<div id="popup1" class="overlay">
+    <div class="popup">
+      <span class="closePopup" onclick="closePopup('popup1')">&times;</span><br><br>
+      <h3>These are the following requirements needed from you.</h3><br>
+      <ul>
+        <li>1. Business IG Page</li>
+        <li>2. National ID Card</li>
+      </ul>
+    </div>
+  </div>
+
     <br><br><br>
 
     <!-- FOOTER    -->
@@ -445,7 +517,7 @@
             </div>
             <div class="social-links">
                 <p>Location : Lagos, Nigeria.</p>
-                <br> Contact : <a href="tel:+234 8145 355 669">
+                <br> WhatsApp : <a href="tel:+234 8145 355 669">
                     +234 8145 355 669
                 </a>
                 <br> Instagram @ Only1Apeke
@@ -467,6 +539,18 @@
         const jsConfetti = new JSConfetti();
         jsConfetti.addConfetti()
     </script>
+
+<script>
+    // Function to open the popup
+    function openPopup(popupId) {
+      document.getElementById(popupId).style.display = 'block';
+    }
+  
+    // Function to close the popup
+    function closePopup(popupId) {
+      document.getElementById(popupId).style.display = 'none';
+    }
+  </script>
 
 </body>
 
