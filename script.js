@@ -1,6 +1,6 @@
 let hamburger = document.querySelector('.hamburger');
 let mbl_nav_cont = document.querySelector('.mobile-nav-container');
-let close_btn = document.querySelector('.close');
+let close_btn = document.querySelector('.close_btn');
 
 hamburger.addEventListener('click', () => {
     mbl_nav_cont.classList.toggle('active');
@@ -28,5 +28,9 @@ ScrollReveal({
     delay: 10
 });
 
-ScrollReveal().reveal('.article, .left, .question', { origin: 'right' });
-ScrollReveal().reveal('.card, .right , .price-card', { origin: 'left' });
+ScrollReveal().reveal('.article', { origin: 'right' });
+ScrollReveal().reveal('.card', { origin: 'left' });
+ScrollReveal().reveal('.question', { origin: 'right' });
+ScrollReveal().reveal('.left', { origin: 'right' });
+ScrollReveal().reveal('.right', { origin: 'left' });
+ScrollReveal().reveal('.price-card', { origin: 'left' });
