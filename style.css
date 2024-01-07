@@ -415,7 +415,6 @@ swiper-slide {
     background-size: cover;
     width: 320px;
     height: 630px;
-    border: 1px solid white;
 }
 
 .slides {
@@ -530,10 +529,18 @@ swiper-slide {
 }
 
 .price-card:nth-child(7)::before {
-    content: "200K";
+    content: "50K";
 }
 
 .price-card:nth-child(8)::before {
+    content: "80K";
+}
+
+.price-card:nth-child(9)::before {
+    content: "200K";
+}
+
+.price-card:nth-child(10)::before {
     content: "400K";
 }
 
@@ -552,6 +559,34 @@ swiper-slide {
     margin-top: 10px;
     font-size: x-large;
     font-weight: 300;
+}
+
+.requirements{
+    width: 150px;
+    height: 40px;
+    margin-top: -45px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.requirements button {
+    padding: 5px;
+    border: 1px solid rgb(233, 23, 23);
+    color: rgb(233, 23, 23);
+    background-color: #fedbdb;
+    border-radius: 8px;
+    letter-spacing: 0.7px;
+    animation: Breathe 2s infinite;
+}
+
+@keyframes Breathe {
+    from{
+        opacity:0.3;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 .rate-description {
@@ -694,14 +729,6 @@ footer .developer-details {
 }
 
 
-/* PRACTICAL TESTING  */
-
-
-/* ///////////////////////// */
-
-
-/* ////////////////////////////////*/
-
 .about-section {
     min-height: 60vh;
     width: 100%;
@@ -784,38 +811,38 @@ footer .developer-details {
 }
 
 
-/* PRACTICAL TESTING  */
+/* THE POPUP STYLINGS */
 
-
-/* ///////////////////////// */
-
-
-.requirements{
-    width: 150px;
-    height: 40px;
-    margin-top: -45px;
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: center;
-}
-
-.requirements button {
-    padding: 5px;
-    border: 1px solid rgb(233, 23, 23);
-    color: rgb(233, 23, 23);
-    background-color: #fedbdb;
-    border-radius: 8px;
-    letter-spacing: 0.7px;
-    animation: Breathe 2s infinite;
-}
-
-@keyframes Breathe {
-    from{
-        opacity:0.3;
+/* Styles for the overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
     }
-    to{
-        opacity: 1;
-    }
-}
 
-/* ////////////////////////////////*/
+    /* Styles for the pop-up */
+    .popup {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    border-radius: 15px;
+    }
+
+    /* Styles for the close button */
+    .closePopup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: xx-large;
+    }
