@@ -562,6 +562,10 @@ swiper-slide {
   margin-bottom: 5px;
 }
 
+.price-card-container .price-card ol{
+  margin-left: 20px;
+}
+
 .price-card-container .price-card button{
   margin-top: 30px;
   margin-left: calc(50% - 85px);
