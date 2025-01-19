@@ -17,134 +17,209 @@
     </script>
 
     <meta charset="UTF-8">
-    <meta name="description" content="Let Apeke’s Media take your brand to the next level with our business power. All gotten at affordable Prices.">
+    <meta name="description"
+        content="Discover how Apeke’s Media transforms businesses with innovative solutions that elevate your brand to new heights. From captivating designs to strategic marketing, we deliver excellence at unbeatable prices. Your journey to success starts here!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal"></script>
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+
     <!-- 
     - favicon
   -->
-    <link rel="shortcut icon" href="assets/images/logo.jpg" type="image/png">
+    <link rel="shortcut icon" href="img/favicon.jpg" type="image/jpg">
     <!-- 
     - preload images
   -->
-    <link rel="preload" as="image" href="assets/images/logo.jpg">
-    <link rel="preload" as="image" href="assets/images/img1.jpg">
+    <link rel="preload" as="image" href="img/logo.png">
 
     <title>Apeke's Media</title>
-    <link rel="stylesheet" href="style.css">
-
 </head>
 
-<!-- THE PRELOADER  -->
-<div class="custom-loader"></div>
 
 <body>
-    <!-- NAV CONTAINER FOR MOBILE  -->
-    <div class="mobile-nav-container">
-        <ul class="mobile-nav">
-            <button class="close_btn">X</button>
-            <a href="#">
-                <li>Home</li>
-            </a>
-            <a href="#CEO">
-                <li>About</li>
-            </a>
-            <a href="#review-page">
-                <li>Reviews</li>
-            </a>
-            <a href="#rate-card">
-                <li>Rate Card</li>
-            </a>
+
+    <!-- DESKTOP NAVIGATION BAR -->
+    <div class="desktop-navbar">
+        <div class="desk-nav-item">
+            <a href="#">Home</a>
+        </div>
+        <div class="desk-nav-item">
+            <a href="#CEO">About</a>
+        </div>
+        <div class="desk-nav-item-img">
+            <img src="img/logo.png" alt="logo">
+        </div>
+        <div class="desk-nav-item">
+            <a href="#review-page">Reviews</a>
+        </div>
+        <div class="desk-nav-item">
+            <a href="#pricing-section">Pricing</a>
+        </div>
+        <div class="desk-nav-item" id="menu-btn" onclick="showOverlay()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35" fill="currentColor">
+                <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Apeke's Media</h2>
+            <button class="close-btn" id="close-btn">
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#"><i class="ri-home-4-line"></i> Home</a></li>
+            <li><a href="#CEO"><i class="ri-user-star-line"></i> About</a></li>
+            <li><a href="#review-page"><i class="ri-customer-service-2-line"></i> Reviews</a></li>
+            <li><a href="#pricing-section"><i class="ri-secure-payment-line"></i> Pricing</a></li>
         </ul>
     </div>
 
-    <!-- THE HEADER  -->
 
-    <header>
-        <!-- THE LOGO  -->
-        <div class="logo">
-            <img src="assets/images/logo.jpg" loading="lazy" alt="logo">
-        </div>
-        <!-- THE NAV CONTAINER FOR DESKTOP -->
-        <div class="desktop-nav-container">
-            <ul class="desktop-nav">
-                <a href="#">
-                    <li>Home</li>
-                </a>
-                <a href="#CEO">
-                    <li>About</li>
-                </a>
-                <a href="#review-page">
-                    <li>Reviews</li>
-                </a>
-                <a href="#rate-card">
-                    <li>Rate Card</li>
-                </a>
-            </ul>
-        </div>
-        <div class="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-    </header>
-
-    <br><br><br><br>
-
-    <!-- THE FIRST SECTION OF THE WEBPAGE -->
+    <!-- FIRST SECTION -->
     <section class="first-sect">
         <div class="article">
             <p>Take your brand to the next Level with Apeke's Media</p>
             <a href="https://wa.me/+2348145355669">
-                <button class="contact-btn">Message Me</button>
+                <button class="contact-btn">
+                    <i class="ri-whatsapp-line"></i>
+                    <code>Message</code>
+                </button>
             </a>
         </div>
     </section>
 
-    <!-- THIS SECTION TALKS ABOUT OUR SERVICES -->
-    <section class="service">
-        <br>
-        <p>WHAT WE CAN DO ?</p>
-        <br>
-        <h3 class="title">
-            The services we offer are specifically designed to meet your needs.
-        </h3>
+    <br><br>
+
+    <!-- SERVICE SECTION -->
+    <h2 class="section-heading-title">Our Services</h2>
+
+    <section class="service-section">
         <div class="service-cards">
 
             <div class="card">
-                <img src="assets/images/call.gif" loading="lazy" alt=""> Communication
+                <img src="./img/conversation.png" loading="lazy" alt=""> <code> Communication </code>
                 <p>
-                    At Apeke’s media We prioritize good communication so expect nothing but the best CUSTOMER SERVICE</p>
+                    At Apeke’s media We prioritize good communication so expect nothing but the best CUSTOMER SERVICE
+                </p>
             </div>
 
             <div class="card">
-                <img src="assets/images/strategy.gif" loading="lazy" alt=""> Marketing Strategies
+                <img src="./img/shopping-online.png" loading="lazy" alt=""> <code> Marketing Strategies </code>
                 <p>We use social media platforms in promoting various brands and businesses</p>
             </div>
 
             <div class="card">
-                <img src="assets/images/surprised.gif" loading="lazy" alt=""> Stunning Contents
+                <img src="./img/writer.png" loading="lazy" alt=""> <code> Stunning Contents </code>
                 <p>Our contents are very attractive and detailed. Such that people can't resist patronizing</p>
             </div>
 
         </div>
     </section>
 
-    <!-- THIS IS THE PART THAT SAYS "ONE MORE THING" -->
-    <br><br>
-    <div class="curved upper">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319"><path fill="rgb(233, 23, 23)" fill-opacity="1" d="M0,64L48,101.3C96,139,192,213,288,224C384,235,480,181,576,165.3C672,149,768,171,864,202.7C960,235,1056,277,1152,256C1248,235,1344,149,1392,106.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-    </div>
-    <div class="curved">
-        <h1>One More Thing</h1>
-        <br>
-        <p>It doesn't just end there concerning our marketing Strategies.</p>
+    <!-- THE ABOUT ME SECTION  -->
+    <p class="meet-the-ceo" id="CEO">Meet the Founder</p>
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319"><path fill="#fff" fill-opacity="1" d="M0,64L48,101.3C96,139,192,213,288,224C384,235,480,181,576,165.3C672,149,768,171,864,202.7C960,235,1056,277,1152,256C1248,235,1344,149,1392,106.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-    </div>
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-img"></div>
+            <div class="right">
+                <div class="content">
+                    <h1>Meet Apeke</h1>
+                    <p>
+                        Hi, I’m Ayodele Abisola, The Founder of Apeke’s media. A full time social media influencer, A
+                        business consultant , A fashion entrepreneur and a relationship therapist. With my platforms,
+                        I’ve helped over 3,000 business owners grow their businesses with a
+                        lot of reviews to show for it. See some below.
+                    </p>
+                    <a href="https://www.instagram.com/only1apeke/" class="btn">Follow Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- THE EXPLANATION OF EACH GROUP USES AND ADVANTAGE  -->
-    <section class="questions">
+    <!-- REVIEW SECTION -->
+
+    <h2 class="section-heading-title" id="review-page">Our Reviews</h2>
+    <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
+        slides-per-view="auto" coverflow-effect-rotate="0" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+        coverflow-effect-modifier="1" coverflow-effect-slide-shadows="false">
+        <swiper-slide>
+            <div class="slide">
+                <br>
+                <img class="review-img" src="./img/Rhias.jpg" loading="lazy" alt="Logo 1">
+                <div class="testimonial">
+                    <p class="review">Honestly I’m not even capping You’ve always done soo much Despite not knowing me
+                        in person You would hype and tell people good things about me And even refer me to your people
+                        So far I’ve gotten over 200 buyers from you I’m so grateful
+                        Thank you for everything you’ve done May God almighty in his infinite mercy continue to bless
+                        and prosper you Thank you sooo much Apeke 🙏💕
+                    </p>
+                    <p>- Rhias Hairline</p>
+                </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="slide">
+                <br>
+                <img class="review-img" src="./img/T-Couture.jpg" loading="lazy" alt="Logo 1">
+                <div class="testimonial">
+                    <p class="review">Only one apeke of Lagos 🙌🥰 Here’s an honest review about the last AD’s you did.
+                        Your people came with full force and I love it. I Sold to an extent, at a point I lost count,
+                        RTW by teemah everywhere brands are really sleeping on
+                        you fr thank you .
+                    </p>
+                    <p>- Teemah Couture</p>
+                </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="slide">
+                <br>
+                <img class="review-img" src="./img/Prayer-House.jpg" loading="lazy" alt="Logo 1">
+                <div class="testimonial">
+                    <p class="review">Good evening The 1 Month influencing was wonderful. I recorded very huge sales and
+                        from time to time I still reminisce on how You made a huge impact on My brand.
+                        Thank You So Much.</p><br><br><br>
+                    <p>- Billionaire Cassie's Prayer House</p>
+                </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="slide">
+                <br>
+                <img class="review-img" src="./img/Lara-Fashion.jpg" loading="lazy" alt="Logo 1">
+                <div class="testimonial">
+                    <p class="review">Sis I must say this !!! You see this influencing business, let them leave it for
+                        you. You are just very good, I got close to 250 contact, and they are buying already, only one
+                        Apeke owo. Thank you I got value for my money. Thank you
+                        so much Apeke.
+                    </p>
+                    <p>- Lara Fashion World</p>
+                </div>
+            </div>
+        </swiper-slide>
+
+    </swiper-container>
+
+    <br>
+
+     <!-- EXTRA BENEFITS WITH APEKE -->
+     <h2 class="section-heading-title">Extra Benefits</h2>
+
+     <br><br>
+
+     <section class="questions">
         <!-- questions -->
         <div class="section-center">
             <article class="question">
@@ -212,341 +287,192 @@
             <!-- end of a single Question  -->
         </div>
     </section>
-    <!-- THE ABOUT ME SECTION  -->
-    <p class="meet-the-ceo" id="CEO">Meet the CEO</p>
 
-    <section class="about-section">
-        <div class="about-container">
-            <div class="about-img"></div>
-            <div class="right">
-                <div class="content">
-                    <h1>Meet Apeke</h1>
-                    <p>
-                        Hi, I’m Ayodele Abisola, The CEO of Apeke’s media. A full time social media influencer, A business consultant , A fashion entrepreneur and a relationship therapist. With my platforms, I’ve helped over 3,000 business owners grow their businesses with a
-                        lot of reviews to show for it. See some below.
-                    </p>
-                    <a href="https://www.instagram.com/only1apeke/" class="btn">Follow Me</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <br><br>
 
-    <br><br><br><br><br>
-
-    <h2 id="review-page">Our Reviews</h2>
-    <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true" slides-per-view="auto" coverflow-effect-rotate="0" coverflow-effect-stretch="0" coverflow-effect-depth="100" coverflow-effect-modifier="1"
-        coverflow-effect-slide-shadows="false">
-        <swiper-slide>
-            <div class="slide">
-                <br>
-                <img class="review-img" src="./assets/images/Rhias.jpg" loading="lazy" alt="Logo 1">
-                <div class="testimonial">
-                    <p class="review">Honestly I’m not even capping You’ve always done soo much Despite not knowing me in person You would hype and tell people good things about me And even refer me to your people So far I’ve gotten over 200 buyers from you I’m so grateful
-                        Thank you for everything you’ve done May God almighty in his infinite mercy continue to bless and prosper you Thank you sooo much Apeke 🙏💕
-                    </p>
-                    <p>- Rhias Hairline</p>
-                </div>
-            </div>
-        </swiper-slide>
-        <swiper-slide>
-            <div class="slide">
-                <br>
-                <img class="review-img" src="./assets/images/T-Couture.jpg" loading="lazy" alt="Logo 1">
-                <div class="testimonial">
-                    <p class="review">Only one apeke of Lagos 🙌🥰 Here’s an honest review about the last AD’s you did. Your people came with full force and I love it. I Sold to an extent, at a point I lost count, RTW by teemah everywhere brands are really sleeping on
-                        you fr thank you .
-                    </p>
-                    <p>- Teemah Couture</p>
-                </div>
-            </div>
-        </swiper-slide>
-        <swiper-slide>
-            <div class="slide">
-                <br>
-                <img class="review-img" src="./assets/images/IBK.jpg" loading="lazy" alt="Logo 1">
-                <div class="testimonial">
-                    <p class="review">Eii BIGGEST APEKE !!😩You really should be thanked often cus what’s this tonic you just added to my growing business?? Gosh!!!💕I’ve never doubted you tho,right from way back that I’ve been following you. Your plenty evidences Dey
-                        really CHOKE!!🔥I just wanted to tap from your grace too as I’ve been seeing other vendors enjoy from you. Maaannn, you don’t have ordinary people on your CL ooo!! What?? I honestly lost counts on the amount of “I’m from Apeke”
-                        that I got and jezzzz these people are sweeet buying clients!!😩🔥They don buy cakes and chops from me taya!Chai,how much did I pay for you to help me carry my business on your head,and how much more have I gotten back to my pocket?
-                        Opor gan ooo ah!. I’ll recommend you anytime,anydayyy. And I’ll do this influencing Kini with you till foreverrrr!!
-
-                    </p>
-                    <p>- IBK Bakes and Events</p>
-                </div>
-            </div>
-        </swiper-slide>
-
-        <swiper-slide>
-            <div class="slide">
-                <br>
-                <img class="review-img" src="./assets/images/Prayer-House.jpg" loading="lazy" alt="Logo 1">
-                <div class="testimonial">
-                    <p class="review">Good evening The 1 Month influencing was wonderful. I recorded very huge sales and from time to time I still reminisce on how You made a huge impact on My brand. Thank You So Much.</p><br><br><br>
-                    <p>- Billionaire Cassie's Prayer House</p>
-                </div>
-            </div>
-        </swiper-slide>
-        <swiper-slide>
-            <div class="slide">
-                <br>
-                <img class="review-img" src="./assets/images/Lara-Fashion.jpg" loading="lazy" alt="Logo 1">
-                <div class="testimonial">
-                    <p class="review">Sis I must say this !!! You see this influencing business, let them leave it for you. You are just very good, I got close to 250 contact, and they are buying already, only one Apeke owo. Thank you I got value for my money. Thank you
-                        so much Apeke.
-                    </p>
-                    <p>- Lara Fashion World</p>
-                </div>
-            </div>
-        </swiper-slide>
-
-    </swiper-container>
-
-
-
-    <h3 id="rate-card">Our Rate Card</h3>
-    <!-- THIS IS THE RATE CARD SECTION  -->
-    <section class="rate-cards">
-        <div class="price-card">
-            <div class="requirements">
-                <button onclick="openPopup('popup1')">Requirements</button>
-            </div>
-            <div class="price">
-                <h4 class="price-title">
-                    Link and Business Picture
-                </h4>
-            </div>
-            <div class="rate-description">
-                It involves your business flier and a WhatsApp link.
-                <br><br> <i>Time Frame :</i> 24hrs
-            </div>
-            <div class="pay-btn-container">
-                <a href="https://paystack.com/pay/apekeslinkandpicture">
-                    <button class="pay-btn">Get Started</button>
-                </a>
-            </div>
-        </div>
-        <div class="price-card">
-            <div class="requirements">
-                <button onclick="openPopup('popup1')">Requirements</button>
-            </div>
-            <div class="price" style="color: rebeccapurple; padding: 10px;">
-                <h4 class="price-title">
-                    Link and business video
-                </h4>
-            </div>
-            <div class="rate-description">
-                A 30secs compiled video of all that you sell, A catchy and detailed content and your WhatsApp link.
-                <br><br> <i>Time Frame :</i> 24hrs
-            </div>
-            <div class="pay-btn-container">
-                <a href="https://paystack.com/pay/apekeslinkandvideo">
-                    <button class="pay-btn" style="border: 1px solid rebeccapurple; color: rebeccapurple;">Get Started</button>
-                </a>
-            </div>
-        </div>
-        <div class="price-card">
-            <div class="requirements">
-                <button onclick="openPopup('popup1')">Requirements</button>
-            </div>
-            <div class="price" style="color: rgb(233, 23, 23);">
-                <h4 class="price-title">
-                    Talking about a brand without products
-                </h4>
-            </div>
-            <div class="rate-description">
-                My voice over your 30secs detailed, catchy and compiled video of all that you sell with a WhatsApp link.
-                <br><br> <i>Time Frame :</i> 24hrs
-            </div>
-            <div class="pay-btn-container">
-                <a href="https://paystack.com/pay/apekestalkabtbrand">
-                    <button class="pay-btn" style="border: 1px solid rgb(233, 23, 23); color: rgb(233, 23, 23);">Get Started</button>
-                </a>
-            </div>
-        </div>
-        <div class="price-card">
-            <div class="requirements">
-                <button onclick="openPopup('popup1')">Requirements</button>
-            </div>
-            <div class="price" style="color: #429933;">
-                <h4 class="price-title">
-                    Talking about a brand with products
-                </h4>
-            </div>
-            <div class="rate-description">
-                A detailed and catchy content from me, showcasing products from the brand with a WhatsApp link.
-                <br><br> <i>Time Frame :</i> 24hrs
-            </div>
-            <div class="pay-btn-container">
-                <a href="https://paystack.com/pay/apekestalkabtbrandwithproduct">
-                    <button class="pay-btn" style="border: 1px solid #429933; color: #429933;">Get Started</button>
-                </a>
-            </div>
-        </div>
-        <div class="price-card">
-            <div class="requirements">
-                <button onclick="openPopup('popup1')">Requirements</button>
-            </div>
-            <div class="price">
-                <h4 class="price-title">
-                    Rock & Tag for one outfit
-                </h4>
-            </div>
-            <div class="rate-description">
-                Free items would be sent down for me to rock beautifully and tag your brand and post on all social media platforms.
-            </div>
-            <div class="pay-btn-container">
-                <a href="https://paystack.com/pay/rockone">
-                    <button class="pay-btn">Get Started</button>
-                </a>
-            </div>
-        </div>
-        <div class="price-card">
-            <div class="requirements">
-                <button onclick="openPopup('popup1')">Requirements</button>
-            </div>
-            <div class="price" style="color: rebeccapurple; padding: 10px;">
-                <h4 class="price-title">
-                    Rock & Tag for two outfits
-                </h4>
-            </div>
-            <div class="rate-description">
-                Free items would be sent down for me to rock beautifully and tag your brand and post on all social media platforms.
-            </div>
-            <div class="pay-btn-container">
-                <a href="https://paystack.com/pay/rocktwo">
-                    <button class="pay-btn" style="border: 1px solid rebeccapurple; color: rebeccapurple;">Get Started</button>
-                </a>
-            </div>
-        </div>
-        <div class="price-card">
-            <div class="requirements">
-                <button onclick="openPopup('popup1')">Requirements</button>
-            </div>
-            <div class="price">
-                <h4 class="price-title">
-                    Location Advert (Mainland)
-                </h4>
-            </div>
-            <div class="rate-description">
-                This involves me leaving my comfort zone, coming to your store or a location of your choice to talk about your brand and showcase your products.
-            </div>
-            <div class="pay-btn-container">
-                <a href="https://paystack.com/pay/apekeslocation_mainland">
-                    <button class="pay-btn">Get Started</button>
-                </a>
-            </div>
-        </div>
-        <div class="price-card">
-            <div class="requirements">
-                <button onclick="openPopup('popup1')">Requirements</button>
-            </div>
-            <div class="price">
-                <h4 class="price-title">
-                    Location Advert (Island)
-                </h4>
-            </div>
-            <div class="rate-description">
-                This involves me leaving my comfort zone, coming to your store or a location of your choice to talk about your brand and showcase your products
-            </div>
-            <div class="pay-btn-container">
-                <a href="https://paystack.com/pay/apekeslocation_island">
-                    <button class="pay-btn">Get Started</button>
-                </a>
-            </div>
-        </div>
-        <div class="price-card">
-            <div class="requirements">
-                <button onclick="openPopup('popup1')">Requirements</button>
-            </div>
-            <div class="price" style="color: rgb(233, 23, 23);">
-                <h4 class="price-title">
-                    Influencing for a month
-                </h4>
-            </div>
-            <div class="rate-description">
-                Brand will be posted thrice weekly and You get 5 promotional videos. Getting sold out is guaranteed .
-                <br><br> <i>Time Frame :</i> A Month
-            </div>
-            <div class="pay-btn-container">
-                <a href="https://paystack.com/pay/influenceamonth">
-                    <button class="pay-btn" style="border: 1px solid rgb(233, 23, 23); color: rgb(233, 23, 23);">Get Started</button>
-                </a>
-            </div>
-        </div>
-        <div class="price-card">
-            <div class="requirements">
-                <button onclick="openPopup('popup1')">Requirements</button>
-            </div>
-            <div class="price" style="color: #429933;">
-                <h4 class="price-title">
-                    Ambassadorial Deal for a month
-                </h4>
-            </div>
-            <div class="rate-description">
-                10 promotional videos , Constant promotional posts across all platforms . Throughout the work time, I can only be seen with the brand and as the face of the brand . Getting sold out is guaranteed.
-                <br><br> <i>Time Frame :</i> A Month
-            </div>
-            <div class="pay-btn-container">
-                <a href="https://paystack.com/pay/apekesambassador">
-                    <button class="pay-btn" style="border: 1px solid #429933; color: #429933;">Get Started</button>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Popup 1 -->
-<div id="popup1" class="overlay">
-    <div class="popup">
-      <span class="closePopup" onclick="closePopup('popup1')">&times;</span><br><br>
-      <h3>These are the following requirements needed from you.</h3><br>
-      <ul>
-        <li>1. Business IG Page</li>
-        <li>2. National ID Card</li>
-      </ul>
-    </div>
-</div>
-
-    <br><br><br>
-
-    <!-- FOOTER    -->
-    <footer>
-        <div class="footer-contacts">
-            <div class="copyright">
-                <h2>Apeke's Media</h2>
-                <br>
-                <p>Copyright &copy; 2023. All Rights Reserved.</p>
-            </div>
-            <div class="social-links">
-                <p>Location : Lagos, Nigeria.</p>
-                <br> WhatsApp : <a href="tel:+234 8145 355 669">
-                    +234 8145 355 669
-                </a>
-                <br> Instagram @ Only1Apeke
-                </a>
-            </div>
-        </div>
+   <!-- EXTRA BENEFITS WITH APEKE -->
+   <h2 class="section-heading-title" id="pricing-section">Our Pricing</h2>
+    <div class="requirements">
+        <b>NOTE : To prevent casualities and online scam, I require the following </b>
         <br>
-        <p class="developer-details" style="font-size: small;">
-            Developed by RENI : <a style="color: white;" href="tel:+2349164886645">+2349164886645</a>
-        </p>
-    </footer>
+        <ul>
+            <li>1. NIN Slip</li>
+            <li>2. Active Social Media Handles</li>
+            <li>3. A full clear pictures that shows your face</li>
+            <li>4. Payment should be made to 0057916612, Apeke's Media, STANBIC IBTC</li>
+            <li>5. After payment, send proof of payment to my Whatsapp</li>
+        </ul>
+    </div>
+
+    <br>
+
+    <div class="price-card-container">
+        <div class="price-card">
+            <h2>Link and Business Picture</h2>
+            <br>
+            <p> <b>Price:</b> N7,000</p>
+            <p> <b>Info:</b> It involves your business flier and a WhatsApp link.
+            </p>
+            <p> <b>Duration:</b> 24hrs</p>
+            <a href="https://wa.me/+2348145355669/?text=Hello%20Apeke,%20I%20would%20like%20the%20Link%20and%20Business%20picture%20plan%20of%207K." target="_blank">
+                <button class="contact-btn" width="100%">
+                    <code>Get Started</code>
+                </button>
+            </a>
+        </div>
+
+        <div class="price-card">
+            <h2>Link and business video</h2>
+            <br>
+            <p> <b>Price:</b> N10,000</p>
+            <p> <b>Info:</b> A 30secs compiled video of all that you sell, A catchy and detailed content and your WhatsApp link.
+            </p>
+            <p> <b>Duration:</b> 24hrs</p>
+            <a href="https://wa.me/2348145355669/?text=Hello%20Apeke,%20I%20would%20like%20the%20Link%20and%20Business%20Video%20plan%20of%2010K." target="_blank">
+                <button class="contact-btn" width="100%">
+                    <code>Get Started</code>
+                </button>
+            </a>
+        </div>
+
+        <div class="price-card">
+            <h2>Talking about a brand without products</h2>
+            <br>
+            <p> <b>Price:</b> N20,000</p>
+            <p> <b>Info:</b> My voice over your 30secs detailed, catchy and compiled video of all that you sell with a WhatsApp link.
+            </p>
+            <p> <b>Duration:</b> 24hrs</p>
+            <a href="https://wa.me/2348145355669/?text=Hello%20Apeke,%20I%20would%20like%20the%20%27Talking%20about%20a%20brand%20without%20products%27%20plan%20of%2020K." target="_blank">
+                <button class="contact-btn" width="100%">
+                    <code>Get Started</code>
+                </button>
+            </a>
+        </div>
+        <div class="price-card">
+            <h2>Talking about a brand with products</h2>
+            <br>
+            <p> <b>Price:</b> N40,000</p>
+            <p> <b>Info:</b> A detailed and catchy content from me, showcasing products from the brand with a WhatsApp link.
+            </p>
+            <p> <b>Duration:</b> 24hrs</p>
+            <a href="https://wa.me/2348145355669/?text=Hello%20Apeke,%20I%20would%20like%20the%20%27Talking%20about%20a%20brand%20with%20products%27%20plan%20of%2040K." target="_blank">
+                <button class="contact-btn" width="100%">
+                    <code>Get Started</code>
+                </button>
+            </a>
+        </div>
+        <div class="price-card">
+            <h2>Rock & Tag for one outfit</h2>
+            <br>
+            <p> <b>Price:</b> N50,000</p>
+            <p> <b>Info:</b> Free items would be sent down for me to rock beautifully and tag your brand and post on all social media platforms.
+            </p>
+            <a href="https://wa.me/+2348145355669">
+                <button class="contact-btn" width="100%">
+                    <code>Get Started</code>
+                </button>
+            </a>
+        </div>
+        <div class="price-card">
+            <h2>Rock & Tag for two outfits</h2>
+            <br>
+            <p> <b>Price:</b> N80,000</p>
+            <p> <b>Info:</b> Free items would be sent down for me to rock beautifully and tag your brand and post on all social media platforms.
+            </p>
+            <a href="https://wa.me/+2348145355669">
+                <button class="contact-btn" width="100%">
+                    <code>Get Started</code>
+                </button>
+            </a>
+        </div>
+        <div class="price-card">
+            <h2>Location Advert</h2>
+            <br>
+            <p> <b>Price:</b> N100,000</p>
+            <p> <b>Info:</b> This involves me leaving my comfort zone, coming to your store or a location of your choice to talk about your brand and showcase your products.
+            </p>
+            <a href="https://wa.me/+2348145355669">
+                <button class="contact-btn" width="100%">
+                    <code>Get Started</code>
+                </button>
+            </a>
+        </div>
+        <div class="price-card">
+            <h2>Influencing for a month</h2>
+            <br>
+            <p> <b>Price:</b> N200,000</p>
+            <p> <b>Info:</b> Brand will be posted thrice weekly and You get 5 promotional videos. Getting sold out is guaranteed .
+            </p>
+            <p> <b>Duration:</b> A Month</p>
+            <a href="https://wa.me/+2348145355669">
+                <button class="contact-btn" width="100%">
+                    <code>Get Started</code>
+                </button>
+            </a>
+        </div>
+        <div class="price-card">
+            <h2>Ambassadorial Deal</h2>
+            <br>
+            <p> <b>Price:</b> N400,000</p>
+            <p> <b>Info:</b> 10 promotional videos , Constant promotional posts across all platforms . Throughout the work time, I can only be seen with the brand and as the face of the brand 
+            </p>
+            <p> <b>Duration:</b> A Month</p>
+            <a href="https://wa.me/+2348145355669">
+                <button class="contact-btn" width="100%">
+                    <code>Get Started</code>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <br>
+
+    <footer>
+        <div class="footer-container">
+          <!-- Logo and About Section -->
+          <div class="footer-section">
+            <div class="footer-logo">
+              <img src="./img/logo.png" alt="Logo">
+              <span>Apeke's Media</span>
+            </div>
+            <p>Discover how Apeke’s Media transforms businesses with innovative solutions that elevate your brand to new heights.</p>
+            <div class="social-icons">
+              <a href="https://instagram.com/only1apeke"><i class="ri-instagram-fill"></i></a>
+              <a href="https://wa.me/+2348145355669"><i class="ri-whatsapp-fill"></i></a>
+            </div>
+          </div>
+    
+          <!-- Quick Links Section -->
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#"CEO>About</a></li>
+              <li><a href="#review-page">Services</a></li>
+              <li><a href="#pricing-section">Pricing</a></li>
+            </ul>
+          </div>
+    
+          <!-- Resources Section -->
+          <div class="footer-section">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+    
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Apeke's Media. All Rights Reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+        </div>
+      </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
-    <script src="script.js"></script>
-
-<script>
-    // Function to open the popup
-    function openPopup(popupId) {
-      document.getElementById(popupId).style.display = 'block';
-    }
-  
-    // Function to close the popup
-    function closePopup(popupId) {
-      document.getElementById(popupId).style.display = 'none';
-    }
-  </script>
-
+    <script src="js/script.js"></script>
 </body>
 
 </html>
