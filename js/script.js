@@ -29,7 +29,6 @@ btns.forEach(function(btn) {
 
 
 ScrollReveal({
-    distance: '150px',
     duration: 1700,
     delay: 10
 });
