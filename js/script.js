@@ -29,8 +29,8 @@ btns.forEach(function(btn) {
 
 
 ScrollReveal({
-    duration: 1700,
-    delay: 10
+    duration: 1600,
+    delay: 20
 });
 
 ScrollReveal().reveal('.article', { origin: 'right' });
